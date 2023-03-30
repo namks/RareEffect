@@ -23,6 +23,8 @@ This method consists of three steps.
 
 Step 1. Fitting the null model
 
-Step 2. Estimate the variant-level effect size for rare variants
+1. Run 230330_run_simulation_step1.sh
 
-Step 3. Estimate the gene-level effect size
+Step 2. Estimate the variant-level effect size and gene-level effect size for rare variants
+
+1. Run 230330_run_simulation_step2.R

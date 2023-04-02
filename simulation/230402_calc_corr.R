@@ -44,17 +44,17 @@ for (i in 1:10) {
                     cor_all[n] <- cor(all2$V2.x, all2$V2.y)
                 }
 
-                cor_lof_name <- paste0("/media/leelabsg-storage0/kisung/RVPRS/simulation/script/result/corr/corr_lof_", ii, "_", jj, "_", kk, ".txt")
-                cor_mis_name <- paste0("/media/leelabsg-storage0/kisung/RVPRS/simulation/script/result/corr/corr_mis_", ii, "_", jj, "_", kk, ".txt")
-                cor_syn_name <- paste0("/media/leelabsg-storage0/kisung/RVPRS/simulation/script/result/corr/corr_syn_", ii, "_", jj, "_", kk, ".txt")
-                cor_all_name <- paste0("/media/leelabsg-storage0/kisung/RVPRS/simulation/script/result/corr/corr_all_", ii, "_", jj, "_", kk, ".txt")
+                cor_lof_name <- paste0("/media/leelabsg-storage0/kisung/RVPRS/simulation/script/result/corr/corr_lof_gene_", i, "_", ii, "_", jj, "_", kk, ".txt")
+                cor_mis_name <- paste0("/media/leelabsg-storage0/kisung/RVPRS/simulation/script/result/corr/corr_mis_gene_", i, "_", ii, "_", jj, "_", kk, ".txt")
+                cor_syn_name <- paste0("/media/leelabsg-storage0/kisung/RVPRS/simulation/script/result/corr/corr_syn_gene_", i, "_", ii, "_", jj, "_", kk, ".txt")
+                cor_all_name <- paste0("/media/leelabsg-storage0/kisung/RVPRS/simulation/script/result/corr/corr_all_gene_", i, "_", ii, "_", jj, "_", kk, ".txt")
 
                 write.table(cor_lof, cor_lof_name, row.names=F, col.names=F, quote=F)
                 write.table(cor_mis, cor_mis_name, row.names=F, col.names=F, quote=F)
                 write.table(cor_syn, cor_syn_name, row.names=F, col.names=F, quote=F)
                 write.table(cor_all, cor_all_name, row.names=F, col.names=F, quote=F)
 
-                print(paste("Scenario", ii, jj, kk, "done."))
+                print(paste("Scenario", ii, jj, kk, "for gene", i, "done."))
             }
         }
     }

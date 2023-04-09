@@ -28,3 +28,11 @@ Step 1. Fitting the null model
 Step 2. Estimate the variant-level effect size and gene-level effect size for rare variants
 
 1. Run 230330_run_simulation_step2.R
+
+#### Run Analysis for Baseline Methods
+
+Baseline methods contains
+
+* Linear regression (linear regression with multiple variants)
+* Marginal effect (linear regression with a single variant)
+* Ridge regression

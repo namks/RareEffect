@@ -14,8 +14,8 @@ This is a repository for the test code of rare-variant PRS.
 
 #### Generation process
 
-1. Run 230329_generate_pheno_common.R and 230329_generate_pheno_rare.R
-2. Run 230329_merge_generated_pheno.R to merge generated phenotypes by simulation scenario
+1. Run `230329_generate_pheno_common.R` and `230329_generate_pheno_rare.R`
+2. Run `230329_merge_generated_pheno.R` to merge generated phenotypes by simulation scenario
 
 ### Run Analysis
 
@@ -23,11 +23,11 @@ This method consists of three steps.
 
 Step 1. Fitting the null model
 
-1. Run 230330_run_simulation_step1.sh
+1. Run `230330_run_simulation_step1.sh`
 
 Step 2. Estimate the variant-level effect size and gene-level effect size for rare variants
 
-1. Run 230330_run_simulation_step2.R
+1. Run `230330_run_simulation_step2.R`
 
 #### Run Analysis for Baseline Methods
 

@@ -10,10 +10,15 @@ for (i in 1:10) {
                 for (kk in 1:2) {
                     for (n in 1:100) {
                         fname <- paste0("betas_", func_anno[j], "_sim", n, "_gene_", i, "_", ii, "_", jj, "_", kk, ".txt")
-                        d <- read.table(fname)
-                        temp <- cbind(func_anno[j], n, i, ii, jj, kk, d)
-                        beta_all <- rbind(beta_all, temp)
+                        try({ 
+                            d <- read.table(fname)
+                            if (nrow(d) > 0) {
+                                temp <- cbind(func_anno[j], n, i, ii, jj, kk, d)
+                                beta_all <- rbind(beta_all, temp)
+                            }
+                        })
                     }
+                    print(paste0("Done for simulations with gene ", i, " and functional annotation ", j, " and ", ii, ", ", jj, ", ", kk))
                 }
             }
         }

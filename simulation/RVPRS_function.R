@@ -131,9 +131,9 @@ split_plink_matrix <- function(plink_matrix, lof_var, mis_var, syn_var, mac_thre
     rowsum_syn[which(rowsum_syn > 1)] <- 1
 
     # genotype matrix after collapsing
-    lof_mat_collapsed <- cbind(lof_mat[, -c(collapse_lof, common_list_lof)], rowsum_lof)
-    mis_mat_collapsed <- cbind(mis_mat[, -c(collapse_mis, common_list_mis)], rowsum_mis)
-    syn_mat_collapsed <- cbind(syn_mat[, -c(collapse_syn, common_list_syn)], rowsum_syn)
+    lof_mat_collapsed <- cbind(lof_mat[, -c(collapse_lof, common_list_lof), drop = F], rowsum_lof)
+    mis_mat_collapsed <- cbind(mis_mat[, -c(collapse_mis, common_list_mis), drop = F], rowsum_mis)
+    syn_mat_collapsed <- cbind(syn_mat[, -c(collapse_syn, common_list_syn), drop = F], rowsum_syn)
 
     out <- list(lof_mat_collapsed, mis_mat_collapsed, syn_mat_collapsed)
     return(out)
